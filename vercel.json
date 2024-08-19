@@ -16,7 +16,7 @@
       "headers": {
         "Service-Worker-Allowed": "/"
       },
-      "dest": "/public/uv.sw.js"
+      "dest": "/public/assets/uv/uv.sw.js"
     },
     {
       "src": "/(.*)",
