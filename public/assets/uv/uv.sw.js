@@ -508,3 +508,16 @@ function renderError(err, fetchedURL) {
         }
     );
 }
+self.addEventListener('fetch', function(event) {
+    const url = new URL(event.request.url);
+    
+    if (url.pathname.startsWith('/gt/')) {
+        const encodedUrl = url.pathname.replace('/gt/', '');
+        const decodedUrl = atob(encodedUrl); // decode
+        
+        const newRequest = new Request(decodedUrl, event.request);
+        event.respondWith(fetch(newRequest));
+    } else {
+        event.respondWith(fetch(event.request));
+    }
+});
