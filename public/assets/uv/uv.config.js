@@ -1,11 +1,11 @@
-/*global Ultraviolet*/
+// public/assets/uv.config.js
 self.__uv$config = {
-    prefix: '/service/',
+    prefix: '/gt/',
+    bare: '/jy/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
-    handler: '/uv.handler.js',
-    client: '/uv.client.js',
-    bundle: '/uv.bundle.js',
-    config: '/uv.config.js',
-    sw: '/uv.sw.js',
+    handler: '/assets/uv.handler.js',
+    bundle: '/assets/uv.bundle.js',
+    config: '/assets/uv.config.js',
+    sw: '/assets/uv.sw.js',
 };
